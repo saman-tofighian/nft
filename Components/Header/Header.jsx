@@ -1,48 +1,48 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { FiSearch } from 'react-icons/fi';
 
 export default function Header() {
   return (
-    <header className='bg-[#04011C] w-full h-21'>
-      <nav className='grid grid-cols-12 px-[6%] w-full h-full'>
-        <figure className='flex items-center col-span-3 h-full'>
+    <header className='bg-[#04011C] border-[#2A1F4C] border-b w-full h-20'>
+      <nav className='items-center grid grid-cols-12 px-[6%] w-full h-full'>
+        {/* --- Logo --- */}
+        <figure className='flex items-center col-span-2 h-full'>
           <Image src='/img/lOGO.png' alt='Logo' width={124} height={44} />
         </figure>
-        <div className='col-span-4 h-full'>
-          <ul className='flex justify-end gap-x-6 w-full h-full'>
-            <li className='flex justify-center items-center w-fit h-full'>
-              <Link
-                href='/'
-                className='w-fit h-fit text-[18px] text-white hover:text-[#be2ab7f2] duration-500 ease-linear'
-              >
-                Explore
-              </Link>
-            </li>
-            <li className='flex justify-center items-center w-fit h-full'>
-              <Link
-                href='/'
-                className='w-fit h-fit text-[18px] text-white hover:text-[#be2ab7f2] duration-500 ease-linear'
-              >
-                Stats
-              </Link>
-            </li>
-            <li className='flex justify-center items-center w-fit h-full'>
-              <Link
-                href='/'
-                className='w-fit h-fit text-[18px] text-white hover:text-[#be2ab7f2] duration-500 ease-linear'
-              >
-                Drops
-              </Link>
-            </li>
-            <li className='flex justify-center items-center w-fit h-full'>
-              <Link
-                href='/'
-                className='w-fit h-fit text-[18px] text-white hover:text-[#be2ab7f2] duration-500 ease-linear'
-              >
-                Activity
-              </Link>
-            </li>
+
+        {/* --- Menu --- */}
+        <div className='col-span-5'>
+          <ul className='flex justify-end gap-x-8 w-full'>
+            {['Explore', 'Stats', 'Drops', 'Activity'].map((item, i) => (
+              <li key={i}>
+                <Link
+                  href='/'
+                  className='font-medium text-[17px] text-white hover:text-[#D71D61] transition-all duration-300'
+                >
+                  {item}
+                </Link>
+              </li>
+            ))}
           </ul>
+        </div>
+
+        {/* --- Search box + Button --- */}
+        <div className='flex justify-end items-center gap-x-5 col-span-5'>
+          {/* Search box */}
+          <div className='relative w-[230px] h-[42px]'>
+            <input
+              type='text'
+              placeholder='Search'
+              className='px-4 border border-[#E7E7E766] rounded-[8px] focus:outline-none w-[185px h-full text-[15px] text-white placeholder:text-[#9a8fbf] transition-all ]'
+            />
+            <FiSearch className='top-1/2 right-9 absolute text-[18px] text-white -translate-y-1/2' />
+          </div>
+
+          {/* Button */}
+          <button className='bg-gradient-to-r from-[#0500FA] to-[#E01E5A] hover:opacity-90 shadow-[0_0_12px_#D71D61aa] px-6 py-2.5 rounded-[8px] font-semibold text-[15px] text-white transition-all cursor-pointer'>
+            Get in Touch
+          </button>
         </div>
       </nav>
     </header>
