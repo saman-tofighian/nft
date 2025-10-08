@@ -12,7 +12,7 @@ export default function Header() {
         </figure>
 
         {/* --- Menu --- */}
-        <div className='col-span-5'>
+        <div className='hidden xl:flex col-span-5'>
           <ul className='flex justify-end gap-x-8 w-full'>
             {['Explore', 'Stats', 'Drops', 'Activity'].map((item, i) => (
               <li key={i}>
