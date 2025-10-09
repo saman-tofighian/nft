@@ -1,18 +1,19 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { FiSearch } from 'react-icons/fi';
+import { RxHamburgerMenu } from 'react-icons/rx';
 
 export default function Header() {
   return (
     <header className='bg-[#04011C] border-[#2A1F4C] border-b w-full h-20'>
       <nav className='items-center grid grid-cols-12 px-[6%] w-full h-full'>
         {/* --- Logo --- */}
-        <figure className='flex items-center col-span-2 h-full'>
+        <figure className='flex items-center col-span-6 lg:col-span-2 h-full'>
           <Image src='/img/lOGO.png' alt='Logo' width={124} height={44} />
         </figure>
 
-        {/* --- Menu --- */}
-        <div className='hidden xl:flex col-span-5'>
+        {/* --- Menu XL --- */}
+        <div className='hidden lg:flex lg:col-span-4 xl:col-span-5'>
           <ul className='flex justify-end gap-x-8 w-full'>
             {['Explore', 'Stats', 'Drops', 'Activity'].map((item, i) => (
               <li key={i}>
@@ -27,8 +28,19 @@ export default function Header() {
           </ul>
         </div>
 
+        {/* --- Menu SM --- */}
+        <div className='lg:hidden flex justify-end col-span-6'>
+          <span>
+            <RxHamburgerMenu
+              size='2.2rem'
+              color='white'
+              className='cursor-pointer'
+            />
+          </span>
+        </div>
+
         {/* --- Search box + Button --- */}
-        <div className='flex justify-end items-center gap-x-5 col-span-5'>
+        <div className='hidden lg:flex justify-end items-center gap-x-5 lg:col-span-6 xl:col-span-5'>
           {/* Search box */}
           <div className='relative w-[230px] h-[42px]'>
             <input
