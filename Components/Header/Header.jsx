@@ -7,10 +7,6 @@ import { TiDeleteOutline } from 'react-icons/ti';
 
 export default function Header() {
   const [openMenu, seOpenMenu] = useState(false);
-  const MenuBtnOpen = () => {
-    document.getElementById('Menu').classList.remove('translate-x-[-500px]');
-    document.getElementById('Menu').classList.add('translate-x-0');
-  };
   return (
     <>
       <header className='bg-[#04011C] border-[#2A1F4C] border-b w-full h-20'>
@@ -40,7 +36,7 @@ export default function Header() {
           <div className='lg:hidden flex justify-end col-span-6'>
             <span>
               <RxHamburgerMenu
-                onClick={openMenu}
+                onClick={() => seOpenMenu(!openMenu)}
                 size='2.2rem'
                 color='white'
                 className='cursor-pointer'
@@ -70,12 +66,14 @@ export default function Header() {
 
       {/* mobile Menu */}
       <div
-        id='Menu'
-        className='lg:hidden left-0 fixed bg-[#04011C] border-[#2A1F4C] border-b w-[40vw] h-[100vh] translate-x-[-500px] duration-500 ease-initial'
+        className={`lg:hidden left-0 fixed bg-[#04011C] border-[#2A1F4C] border-b w-[40vw] h-[100vh]  duration-500 ease-initial ${
+          openMenu ? 'translate-x-0' : 'translate-x-[-500px]'
+        }`}
       >
         <div className='w-full h-full'>
           <span className='flex justify-end my-7 px-4 w-full'>
             <TiDeleteOutline
+              onClick={() => seOpenMenu(!openMenu)}
               size='2.8rem'
               color='#D71D61'
               className='cursor-pointer'
