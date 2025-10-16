@@ -76,6 +76,11 @@ export default function Cards() {
           </div>
         ))}
       </div>
+      <div className='flex justify-center mt-16 mb-7 w-full'>
+        <div className='relative bg-[#E7E7E73D] rounded-full w-2/5 h-[2px]'>
+          <span className='top-0 right-0 absolute bg-gradient-to-r from-[#0501d4] to-[#e60e52] rounded-full w-[220px] h-[2px] translate-x-1/2'></span>
+        </div>
+      </div>
     </section>
   );
 }
