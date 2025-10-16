@@ -39,7 +39,6 @@ export default function Cards2() {
                 className='rounded-[8px] w-[464px] xl:w-[264px] h-[232px] object-cover'
               />
             </figure>
-
             <div className='flex flex-col justify-between mt-3 px-5 w-full text-white'>
               <h6 className='flex items-center gap-x-2 mb-1.5 text-[14px]'>
                 By Ya Chin-Ho
