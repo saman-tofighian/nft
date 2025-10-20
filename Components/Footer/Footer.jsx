@@ -4,7 +4,6 @@ import {
   FaLinkedinIn,
   FaTwitter,
 } from 'react-icons/fa';
-
 export default function Footer() {
   return (
     <>
@@ -29,7 +28,6 @@ export default function Footer() {
               <li className='text-[16px] text-white'>Platform Status</li>
             </ul>
           </div>
-
           <div className='col-span-12 lg:col-span-3'>
             <h5 className='mb-8 font-semibold text-[24px] text-white text-center lg:text-start'>
               Community
@@ -43,7 +41,6 @@ export default function Footer() {
               <li className='text-[16px] text-white'>Activity</li>
             </ul>
           </div>
-
           <div className='col-span-12 lg:col-span-3'>
             <h5 className='mb-8 font-semibold text-[24px] text-white text-center lg:text-start'>
               Categories
@@ -57,7 +54,6 @@ export default function Footer() {
               <li className='text-[16px] text-white'>Photography</li>
             </ul>
           </div>
-
           <div className='col-span-12 lg:col-span-3 mt-8 lg:mt-0'>
             <h5 className='mb-8 font-semibold text-[24px] text-white text-center lg:text-start'>
               Marketplace
@@ -66,7 +62,6 @@ export default function Footer() {
               If you’re an NFT enthusiast or are looking to download our NFT
               App.
             </p>
-
             <div className='flex sm:flex-row flex-col items-stretch mb-6 w-full'>
               <input
                 type='email'
@@ -77,7 +72,6 @@ export default function Footer() {
                 Subscribe
               </button>
             </div>
-
             <div className='flex justify-center lg:justify-start items-center gap-x-4 mt-4'>
               <a
                 href='#'
