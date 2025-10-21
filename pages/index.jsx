@@ -1,5 +1,6 @@
 import Cards from '@/Components/Cards/Cards';
 import Cards2 from '@/Components/Cards/Cards2';
+import Counts from '@/Components/Counts/Counts';
 import Footer from '@/Components/Footer/Footer';
 import Header from '@/Components/Header/Header';
 import Motto from '@/Components/Motto/Motto';
@@ -9,6 +10,7 @@ export default function Home() {
     <main className='w-full overflow-x-hidden'>
       <Header />
       <Motto />
+      <Counts />
       <Cards />
       <Cards2 />
       <Footer />
