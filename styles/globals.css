@@ -10,7 +10,7 @@ body {
   min-height: 100vh;
   font-size: 100%;
   background: radial-gradient(
-    circle at top right,
+    circle at 50% 100%,
     rgba(215, 29, 97, 0.6) 0%,
     rgba(88, 0, 107, 0.5) 40%,
     rgba(10, 0, 25, 1) 100%
