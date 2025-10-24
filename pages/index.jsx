@@ -4,6 +4,7 @@ import Counts from '@/Components/Counts/Counts';
 import Footer from '@/Components/Footer/Footer';
 import Header from '@/Components/Header/Header';
 import Motto from '@/Components/Motto/Motto';
+import Motto2 from '@/Components/Motto2/Motto2';
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Counts />
       <Cards />
       <Cards2 />
+      <Motto2 />
       <Footer />
     </main>
   );
