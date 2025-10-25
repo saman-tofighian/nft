@@ -3,8 +3,8 @@ import Image from 'next/image';
 export default function Motto2() {
   return (
     <section className='mt-36 w-full'>
-      <div className='items-center grid grid-cols-12 px-[6%] w-full'>
-        <figure className='col-span-12 xl:col-span-6'>
+      <div className='items-center gap-y-10 xl:gap-x-12 xl:gap-y-0 xxl:gap-x-0 grid grid-cols-12 px-[6%] w-full'>
+        <figure className='flex justify-center xl:justify-start col-span-12 xl:col-span-6'>
           <Image
             alt='Motto2'
             src='/img/Motto2.png'
@@ -24,7 +24,7 @@ export default function Motto2() {
             practice not without controversy, laying out pages with meaningless
           </p>
           <div className='mt-6 w-full'>
-            <button className='bg-gradient-to-r from-[#0500FA] to-[#E01E5A] px-9 py-2.5 rounded-[8px] text-white cursor-pointer'>
+            <button className='bg-gradient-to-r from-[#0500FA] to-[#E01E5A] px-8 py-2.5 rounded-[8px] text-white cursor-pointer'>
               Connect Wallet
             </button>
           </div>
