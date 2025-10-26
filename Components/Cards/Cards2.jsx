@@ -12,7 +12,6 @@ export default function Cards2() {
 
   return (
     <section className='mt-24 w-full'>
-      {/* عنوان */}
       <div className='relative flex justify-center items-center mb-10 text-center'>
         <h2 className='bg-clip-text bg-gradient-to-r from-[#06045B] to-[#E01E5A] font-bold text-[105px] text-transparent leading-[1.1] select-none'>
           NFTs
