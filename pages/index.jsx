@@ -1,3 +1,4 @@
+import Brands from '@/Components/Brands/Brands';
 import Cards from '@/Components/Cards/Cards';
 import Cards2 from '@/Components/Cards/Cards2';
 import Cards3 from '@/Components/Cards/Cards3';
@@ -17,6 +18,7 @@ export default function Home() {
       <Cards2 />
       <Cards3 />
       <Motto2 />
+      <Brands />
       <Footer />
     </main>
   );
