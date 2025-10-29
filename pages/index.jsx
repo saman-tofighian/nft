@@ -5,6 +5,7 @@ import Cards3 from '@/Components/Cards/Cards3';
 import Counts from '@/Components/Counts/Counts';
 import Footer from '@/Components/Footer/Footer';
 import Header from '@/Components/Header/Header';
+import Market from '@/Components/Market/Market';
 import Motto from '@/Components/Motto/Motto';
 import Motto2 from '@/Components/Motto2/Motto2';
 
@@ -17,6 +18,7 @@ export default function Home() {
       <Cards />
       <Cards2 />
       <Cards3 />
+      <Market />
       <Motto2 />
       <Brands />
       <Footer />
