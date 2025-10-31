@@ -2,6 +2,7 @@ import Brands from '@/Components/Brands/Brands';
 import Cards from '@/Components/Cards/Cards';
 import Cards2 from '@/Components/Cards/Cards2';
 import Cards3 from '@/Components/Cards/Cards3';
+import Collections from '@/Components/Collections/Collections';
 import Counts from '@/Components/Counts/Counts';
 import Footer from '@/Components/Footer/Footer';
 import Header from '@/Components/Header/Header';
@@ -16,6 +17,7 @@ export default function Home() {
       <Motto />
       <Counts />
       <Cards />
+      <Collections />
       <Cards2 />
       <Cards3 />
       <Market />
