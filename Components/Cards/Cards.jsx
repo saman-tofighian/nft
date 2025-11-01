@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useState } from 'react';
 import { FaShapes } from 'react-icons/fa';
@@ -26,9 +27,13 @@ export default function Cards() {
       </div>
 
       <div className='gap-y-8 md:gap-x-6 xl:gap-y-0 grid grid-cols-12 px-[6%] w-full'>
-        {cardsList.map((items) => (
-          <div
+        {cardsList.map((items, index) => (
+          <motion.div
             key={items.id}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: index * 0.2, ease: 'easeOut' }}
+            viewport={{ once: true }}
             className='col-span-12 md:col-span-6 xl:col-span-3 bg-[#1E1B33] p-5 rounded-[12px]'
           >
             <figure className='flex justify-center w-full'>
@@ -73,12 +78,13 @@ export default function Cards() {
                 Live now
               </button>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
+
       <div className='flex justify-center mt-16 mb-7 w-full'>
-        <div className='relative bg-[#E7E7E73D] rounded-full w-2/5 h-[2px]'>
-          <span className='top-0 right-0 absolute bg-gradient-to-r from-[#0501d4] to-[#e60e52] rounded-full w-[220px] h-[2px] translate-x-1/2'></span>
+        <div className='relative bg-[#E7E7E73D] rounded-full w-2/5 h-[2px] overflow-hidden'>
+          <span className='top-0 right-0 absolute bg-gradient-to-r from-[#0500FA] to-[#E01E5A] rounded-full w-[220px] h-[2px] translate-x-[20%]'></span>
         </div>
       </div>
     </section>
